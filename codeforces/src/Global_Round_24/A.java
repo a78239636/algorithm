@@ -1,7 +1,5 @@
-package Global_Round_23;
+package Global_Round_24;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class A {
@@ -9,12 +7,11 @@ public class A {
     static void solve(Scanner in) {
         int n = in.nextInt();
         int[] a = new int[n + 50];
-
         for (int i = 0; i < n; i++) {
             a[i] = in.nextInt();
         }
-
         System.out.println("1 " + n);
+
     }
 
     public static void main(String[] args) {
