@@ -46,7 +46,7 @@ public class Main {
         int p = 0, remove = 0;
         StringBuilder ss = new StringBuilder(s);
         List<Integer> list = new ArrayList<>();
-        while (!ss.isEmpty()) {
+        while (!ss.toString().isEmpty()) {
             if (ss.charAt(0) != ss.charAt(ss.length() - 1)) {
                 ss.deleteCharAt(ss.length() - 1);
                 ss.deleteCharAt(0);
