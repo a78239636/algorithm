@@ -1,10 +1,9 @@
 package Util;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 /**
- * 寻找好的HashMap初始化和更新的写法
+ * 寻找优雅的HashMap初始化和更新的写法
  *
  */
 public class HashMapTest {
@@ -26,6 +25,11 @@ public class HashMapTest {
         System.out.println(cntMap.get(key));
     }
 
+    public static void sort() {
+        HashMap<String, Integer> cntMap = new HashMap<>();
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(cntMap.entrySet());
+        list.sort(Map.Entry.comparingByValue(Comparator.comparingInt(x -> x)));
+    }
 
     public static void main(String[] args) {
         //testComputeMethod();

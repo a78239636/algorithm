@@ -3,10 +3,7 @@ package Base;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
 
@@ -16,7 +13,7 @@ public class Main {
     static List<Integer> list;
 
     static void solve()  {
-       n = Reader.nextInt();
+        n = Reader.nextInt();
     }
     public static void main(String[] args)  {
         Reader.init();
@@ -63,16 +60,24 @@ public class Main {
             return Double.parseDouble(next());
         }
     }
-    static class Pair {
-        int x, y;
+    static class Pair<K, V> {
+        K key;
+        V value;
 
-        Pair(int x, int y) {
-            this.x = x;
-            this.y = y;
+        Pair(K x, V y) {
+            this.key = x;
+            this.value = y;
         }
-        static Pair MakePair(int x, int y) {
-            return new Pair(x, y);
+        public static <K, V> Pair<K, V> MakePair(K x, V y) {
+            return new Pair<K, V>(x, y);
         }
 
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
     }
 }
