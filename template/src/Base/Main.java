@@ -79,5 +79,32 @@ public class Main {
         public V getValue() {
             return value;
         }
+
+        @Override
+        public String toString() {
+            return "Pair(" + key + ", " + value + ')';
+        }
+    }
+    static class Tuple<F, S, T> {
+        F a;
+        S b;
+        T c;
+        Tuple(F first, S second, T third) {
+            this.a = first;
+            this.b = second;
+            this.c = third;
+        }
+
+        @Override
+        public String toString() {
+            return "Tuple(" + a + ", " + b + ", " + c + ')';
+        }
     }
 }
+/*
+
+
+
+
+
+ */
